@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos Mensuales</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="main-container">
+    <div class="container">
+        <div class="title-container">
+            <img src="assets/img/titulo.png" alt="Control de Gastos Mensuales">
+        </div>
+        <div class="form-group">
+            <label for="nombreGasto">Nombre del gasto</label>
+            <input type="text" id="nombreGasto" placeholder="Nombre del gasto">
+            <label for="valorGasto">Valor del gasto</label>
+            <input type="text" id="valorGasto" placeholder="Valor del gasto">
+            <label for="descripcionGasto">Descripción del gasto</label>
+            <textarea id="descripcionGasto" placeholder="Descripción del gasto" rows="3"></textarea>
+            <div class="button-group">
+                <button id="botonFormulario">Agregar Gasto</button>
+                <button id="mostrarTabla">Total</button>
+                <button id="botonSalir" onclick="salir()">Salir</button>
+            </div>
+        </div>
+        <div id="tablaGastosContainer" style="display: none;">
+            <h2>Resumen de Gastos</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Gasto</th>
+                    <th>Detalle</th>
+                    <th>Precio</th>
+                </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+                </tbody>
+            </table>
+            <div class="tabla-total">
+                <p>El total de gastos mensual es: US$ <span id="totalGastosTabla">0.00</span></p>
+            </div>
+            <div class="botones-tabla">
+                <button onclick="editarGastos()">Editar</button>
+                <button onclick="eliminarGastos()">Eliminar</button>
+                <button onclick="volver()">Volver</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
+

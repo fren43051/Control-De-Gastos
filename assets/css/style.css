@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #1875E8;
+    --secondary-color: #041832;
+    --background-color: #f0f0f0;
+    --text-color: white;
+    --button-hover-color: #4cae4c;
+    --button-active-color: #e68900;
+    --button-delete-color: #ff9800;
+    --button-delete-hover-color: #e68900;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('../img/codigo.svg'), linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    font-size: 1rem;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+button {
+    padding: 10px 40px;
+    width: fit-content;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: var(--button-active-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: fit-content;
+    overflow-y: auto;
+    width: 100%;
+}
+
+ul li {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li button {
+    background-color: var(--button-delete-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+ul li button:hover {
+    background-color: var(--button-delete-hover-color);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    height: 92vh;
+    margin: 30px 20px 20px 65px;
+    padding: 20px;
+    width: 90%;
+    background: linear-gradient(0deg, rgba(20, 68, 128, 0.3), rgba(20, 68, 128, 0.3)),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+    border-radius: 24px;
+    color: var(--text-color);
+    box-shadow: 4px 4px 20px 0px #01080E26;
+    border: 1px solid var(--primary-color);
+}
+
+.container {
+    display: flex;
+    gap: 45px;
+    width: 1700px;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 38px;
+    justify-content: center;
+    width: 100%;
+}
+
+.total {
+    margin-top: -100px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: var(--text-color);
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: var(--background-color);
+}
+
+th, td {
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    text-align: left;
+    color: #252526;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#tablaGastosContainer {
+    margin-top: -30px;
+    background-color: rgba(4, 24, 50, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.botones-tabla {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.tabla-total {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.title-container img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: -30px auto;
+}
+
+.hidden {
+    display: none;
+}
